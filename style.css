@@ -64,11 +64,11 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 }
-
 .col_even,
 .col_odd {
-	border: 1px solid black;
+	border: 1px solid #999;
 }
 
 .count {
@@ -76,6 +76,8 @@
 	height: 1.2em;
 	font-size: 1em;
 	text-align: center;
+	margin: 0.2em;
+	border: 1px solid #999;
 }
 
 .button {
@@ -91,4 +93,13 @@
 .button:hover {
 	background-color: hsl(208, 80%, 23%);
 	cursor: pointer;
+}
+
+.container {
+	width: 10em;
+	height: 10em;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	flex-wrap: wrap;
 }
