@@ -13,8 +13,6 @@ const getRandomNumbers = () => {
 	}
 	random();
 
-	result.sort(sortArray);
-
 	return result;
 };
 
@@ -26,9 +24,11 @@ const createElement = (element, toAppend) => {
 };
 
 const handleClickToRenderNumbers = () => {
+	const numbers = getRandomNumbers();
+	numbers.sort(sortArray);
+	console.log(numbers);
 	const parentEven = qs(".row_even");
 	const parentOdd = qs(".row_odd");
-	const numbers = getRandomNumbers();
 
 	numbers.forEach(num => (num % 2 === 0 ? createElement(num, parentEven) : createElement(num, parentOdd)));
 };

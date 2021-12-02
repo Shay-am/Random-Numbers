@@ -15,6 +15,7 @@
 .header_title {
 	text-align: center;
 	color: hsla(208, 80%, 41%, 1);
+	margin-right: 2em;
 }
 
 .main {
@@ -27,7 +28,7 @@
 
 .table_container {
 	table-layout: fixed;
-	width: 60%;
+	width: 30%;
 	height: 40%;
 	height: auto;
 	border-collapse: collapse;
@@ -37,6 +38,7 @@
 	margin-bottom: 2em;
 	font-size: 1.5em;
 	border-bottom: 1px solid hsla(208, 80%, 41%, 1);
+	box-shadow: inset 0 0 0.4em hsla(208, 80%, 41%, 1);
 }
 
 .table_heading {
@@ -64,9 +66,29 @@
 	align-items: center;
 }
 
+.col_even,
+.col_odd {
+	border: 1px solid black;
+}
+
 .count {
+	width: 10em;
 	height: 1.2em;
 	font-size: 1em;
-
 	text-align: center;
+}
+
+.button {
+	display: inline-block;
+	background-color: hsla(208, 80%, 41%, 1);
+	color: white;
+	width: 7em;
+	height: 3em;
+	padding: 0.6em 1.1em;
+	border-radius: 2em;
+	margin-left: 3em;
+}
+.button:hover {
+	background-color: hsl(208, 80%, 23%);
+	cursor: pointer;
 }
