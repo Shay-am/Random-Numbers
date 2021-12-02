@@ -21,6 +21,7 @@
 }
 
 .main {
+	position: relative;
 	width: 100vw;
 	height: 100vh;
 	display: flex;
@@ -30,9 +31,7 @@
 
 .table_container {
 	table-layout: fixed;
-	width: 30%;
-	height: 40%;
-	height: auto;
+
 	border-collapse: collapse;
 	border: 3px solid var(--primary-color);
 }
@@ -40,7 +39,7 @@
 	margin-bottom: 1em;
 	font-size: 1.5em;
 	border-bottom: 1px solid var(--primary-color);
-	box-shadow: inset 0 0 0.4em var(--primary-color);
+	box-shadow: inset 0 0 0.3em var(--primary-color);
 }
 
 .table_heading {
@@ -95,4 +94,36 @@
 .button:hover {
 	background-color: var(--hover-button-color);
 	cursor: pointer;
+}
+
+@media only screen and (max-width: 620px) {
+	.table_container {
+		width: auto;
+		position: relative;
+	}
+	.count {
+		width: 7em;
+		height: 1em;
+		font-size: 0.8em;
+	}
+	.button {
+		width: 5em;
+		display: block;
+		height: 2em;
+		margin: 0 0 0 0.4em;
+		padding: 0;
+	}
+	.table_caption {
+		font-size: 1em;
+	}
+	.col_even,
+	.col_odd,
+	.row_even,
+	.row_odd {
+		width: 7em;
+		font-size: 1em;
+	}
+	.tbody_container {
+		width: 10 0%;
+	}
 }
