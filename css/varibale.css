@@ -1,0 +1,5 @@
+:root {
+	--primary-color: hsla(208, 80%, 41%, 1);
+	--hover-button-color: hsl(208, 80%, 23%);
+	--border-grey: #999;
+}
