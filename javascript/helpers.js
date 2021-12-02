@@ -1,17 +1,21 @@
 export const getNumber = () => Math.floor(Math.random() * 100) + 1;
 export const sortArray = (a, b) => a - b;
 export const qs = selector => document.querySelector(selector);
+export const clearColumn = coll => (coll.textContent = "");
 
 export const getRandomNumbers = () => {
 	const result = [];
+
 	function random() {
-		result.push(getNumber());
-		result.length === 20 ? result : random();
+		let num = getNumber();
+
+		result[result.length - 1] % 2 !== num % 2 ? result.push(num) : getNumber();
+
+		return result.length === 20 ? result : random();
 	}
 	random();
-	result.sort(sortArray);
 
-	return result;
+	return result.sort(sortArray);
 };
 
 export const createDomElement = (element, toAppend) => {
